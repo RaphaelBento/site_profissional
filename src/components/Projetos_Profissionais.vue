@@ -1,94 +1,94 @@
 <template>
-  <div class="hello">
-  <div class="box">
-    <div class="header">
+ <div class="box">
     
-        <h1 id="tituloPagina">Raphael Bento</h1>
-        <ul class="nav nav-tabs nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Perfil</a>
-          </li>
-          <li class="nav-item">
-            <router-link to="/Resumo">Resumo Profissional</router-link>
-            
-          </li>
-          <li class="nav-item">
-            <router-link to="/Certificado">Certificados e Formação</router-link>
-            
-          </li>
-          <li class="nav-item">
-            <router-link to="/Projetos">Projetos</router-link>
-          </li>
-        </ul>
-        
-    </div>
-    <router-view></router-view>
-    <div class="content">
-  
-    <h5 id="SubTitle">Seja bem vindo(a) ao meu perfil Profissional!!</h5>
-    <div class="center">
-      <img src="@/assets/FotoCircular.png" alt="Foto_Perfil" id="FotoPerf" >
-    </div>
-      <h6 style="text-align: center;">Olá obrigado por dedicar um tempo para ver meu perfil aqui no Git</h6>
-     
-      <div class="row" id="LineConte">
-        <div class="col-sm-8">
-          <div class="card" id="CorpCard" >
-            <div class="card-body">
-              <h5 class="card-title" style="text-align: center;">Um breve resumo</h5>
-              <p class="card-text" style="text-align: center;">Tenho 32 anos gosto de tecnologias em geral .<br>
-      
-                Algumas de minhas habilidades:<br>
-                - C#, WebForms, AspNet, .NetCore, Razor, Blazor, API .NetCore  <br>
-                - Java focado para Android('Nível básico, estive em um projeto com api30 do Android')<br>
-                - HTML 5, CSS, JavaScript <br>
-                - VueJs('Nivel pleno'), Angular('Iniciante'), React('Iniciante')<br>
-                - Tenho muita paciência tanto para aprender quanto para ensinar<br>
-                - Gosto de desafios e sou determinado.<br>
-                - Também sou resiliente.
-                <br>No momento estou estudando para minha pós.
-                <br> Meu histórico profissional você pode conferir
-                na aba Resumo Profissional ou clicando <a href="ResumoPro.html">aqui.</a> </p>
+        <div class="content">
+          <h3 style="text-align: center;">Toque ou click em qualquer Card para mais detalhes. </h3>
+          <div class="flex-container">
+            <div class="vira-card">
+              <div class="vira-card-inner">
+                <div class="vira-card-front">
+                  <img src="@/assets/imagens_projetos/AspnetCoreMvc.png" alt="imagem AspNetCore MVC" style="width:250px;height:300px;border-radius: 8px;">
+                  <h6>Consumindo Api com AspNetCore_Mvc</h6> 
+                </div>
+                <div class="vira-card-back">
+                  <h4>Conumindo API com ASPNETCORE MVC</h4> 
+                  <p>Aplicação construida para consumir API de finança da Awesome.</p> 
+                  <p>Contem duas páginas na aplicação uma para conversão de dolar para real e outra para conversão de euro para real.
+                    <br>
+                    <a href="https://github.com/RaphaelBento/Consumindo_API_de_Cota-o">Link do repositório GitHub</a>
+                  </p>
+                </div>
+              </div>
             </div>
+
+
+            <div class="vira-card">
+              <div class="vira-card-inner">
+                <div class="vira-card-front">
+                  <img src="@/assets/imagens_projetos/APINETCORE.png" alt="Imagem API .net core" style="width:250px;height:300px;border-radius: 8px;">
+                  <h6>API .NETCORE</h6>
+                </div>
+                <div class="vira-card-back" style="text-align: center;padding: 10px;">
+                  <h4>API feita em .NetCore</h4> 
+                 
+                  <p> Trata-se de uma API simples com funcionamento básico
+                    ganhará mais funções, e um CRUD com banco usando Entity FrameWork Core.
+                    <br>
+                    para acessar o código fonte da aplicação acesse <a href="https://github.com/RaphaelBento/API-ASP-.Net-Core-">Link do repositório GitHub</a></p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="vira-card">
+              <div class="vira-card-inner">
+                <div class="vira-card-front">
+                  <img src="@/assets/imagens_projetos/NetFrameWork.jpeg" alt="Imagem dotNet FrameWork" style="width:250px;height:300px;border-radius: 8px;">
+                  <h6>API .Net FrameWork</h6> 
+                </div>
+                <div class="vira-card-back" style="text-align: center;padding: 10px;">
+                  <h4>API feita em .Net FrameWork</h4> 
+                  <p>Trata-se de uma API simples com funcionamento básico
+                    ganhará mais funções, e um CRUD com banco usando Entity FrameWork.
+                    <br>
+                    para acessar o código fonte da aplicação acesse <a href="https://github.com/RaphaelBento/Api_DotNet_FrameWork">Link do repositório GitHub</a> </p> 
+                 
+                </div>
+              </div>
+            </div>
+
+            <div class="vira-card">
+              <div class="vira-card-inner">
+                <div class="vira-card-front">
+                  <img src="@/assets/imagens_projetos/ControleContatos.png" alt="Imagem dotNet FrameWork" style="width:250px;height:300px;border-radius: 8px;">
+                  <h6>Controle de Contatos</h6> 
+                </div>
+                <div class="vira-card-back" style="text-align: center;padding: 10px;">
+                  <h4>Aplicação feita em AspNetCore MVC</h4> 
+                  <p>Aplicação usa padrão MVC para gerenciar um CRUD de contatos, também utiliza EntityFrameWork Core como ORM
+                    <br>
+                    para acessar o código fonte da aplicação acesse <a href="https://github.com/RaphaelBento/Controle-de-contatos-">Link do repositório GitHub</a> </p> 
+                 
+                </div>
+              </div>
+            </div>
+
+           
           </div>
+          <h3 style="text-align: center;margin-top: 35px;">Em breve mais projetos serão adicionados <br>me segue no <a href="https://www.linkedin.com/in/raphael-bento-b37656181/">Linkedin</a> </h3>
         </div>
+
      
-      </div>
-   
     </div>
-
-    <div class="footer">
-      <div class="flex-container">
-        <div class="NotasRodape">
-          <p style="color: white;display:inline-block;">Formas de contato :</p>
-        </div>
-
-        <div  class="NotasRodape">
-             <img src="@/assets/imagens_footer/whatsapp.png" alt="LogoWhatsAPP" >
-             <p style="color: white;display:inline-block;">(51)995352884</p>
-        </div> 
-      
-        <div class="NotasRodape">
-          <a href="https://www.linkedin.com/in/raphael-bento-b37656181/">
-          <img src="@/assets/imagens_footer/LogoLinkedin.png" alt="Logo linkedin" id="LogoLink"> </a>
-        </div>
-
-    
-      </div>
-    </div>
-</div>
-
-    
-  
-  </div>
 </template>
 
 <script>
+export default {
 
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 h3 {
   margin: 40px 0 0;
 }
@@ -170,20 +170,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', end
     max-height: 55px;
    
   }
-  /* @media only screen and (max-width: 352px) {
-    
-    #LogoLink{
-      width: 100%;
-     
-    }
-  }
-  @media only screen and (max-width: 752px) {
-    
-    #LogoLink{
-      width: 100%;
-     
-    }
-  } */
+
 
   #CorpCard{
     box-shadow: 10px 5px 5px #696969;

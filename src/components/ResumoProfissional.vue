@@ -12,7 +12,11 @@
             <div class="flip-card">
               <div class="">
                 <div class="flip-card-front">
-                  <img src="Assets/Imagens/LogoBuidIt.PNG" class="ImgCard" alt="Avatar" id="BuildIt">
+                  
+                  <button @click="showElement('BuildIt')">
+                    <img src="@/assets/imagens_historico_profissional/LogoBuidIt.png" class="ImgCard" alt="Avatar" id="BuildIt">
+                  </button>
+ 
                 </div>
               </div>
             </div>
@@ -24,7 +28,7 @@
             <div class="flip-card">
               <div class="">
                 <div class="flip-card-front">
-                  <img src="Assets/Imagens/MynarkiLogo.png" class="ImgCard" alt="Avatar" id="Mynarski">
+                  <img src="@/assets/imagens_historico_profissional/MynarkiLogo.png" class="ImgCard" alt="Avatar" id="Mynarski">
                 </div>
               </div>
             </div>
@@ -36,7 +40,10 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="Assets/Imagens/LibracomLogo.jpg" class="ImgCard" alt="Avatar" id="Libra">
+                  
+                  <button @click="showElement('Libra')">
+                    <img src="@/assets/imagens_historico_profissional/LibracomLogo.jpg" class="ImgCard" alt="Avatar" id="Libra">
+                  </button>
                 </div>
               </div>
             </div>
@@ -48,7 +55,7 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="Assets/Imagens/LogoAbsis.png" class="ImgCard" alt="Avatar" id="ABSIS">
+                  <img src="@/assets/imagens_historico_profissional/LogoAbsis.png" class="ImgCard" alt="Avatar" id="ABSIS">
                 </div>
               </div>
             </div>
@@ -60,7 +67,7 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="Assets/Imagens/BbdiLogo.png" class="ImgCard" alt="Avatar" id="BBDI">
+                  <img src="@/assets/imagens_historico_profissional/BbdiLogo.png" class="ImgCard" alt="Avatar" id="BBDI">
                 </div>
               </div>
             </div>
@@ -72,7 +79,7 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="Assets/Imagens/Numeria.png" class="ImgCard" alt="Avatar" id="NUMERIA"
+                  <img src="@/assets/imagens_historico_profissional/Numeria.png" class="ImgCard" alt="Avatar" id="NUMERIA"
                     style="background-color: rgba(255, 255, 255, 0.925);">
                 </div>
               </div>
@@ -80,7 +87,7 @@
           </a>
         </div>
         <!-- Box da BuildIt -->
-        <div id="BoxBuildIt" style="display: none;">
+        <div v-if="activeElement === 'BuildIt'" id="BoxBuildIt">
           <div>
             <div class="card" id="CardBody">
               <div class="card-header" id="HeaderCard">
@@ -102,9 +109,10 @@
               </div>
             </div>
           </div>
-        </div>
+    </div>
+        
 
-        <div id="BoxLibra" style="display: none;">
+        <div v-if="activeElement === 'Libra'" id="BoxLibra" >
           <div>
             <div class="card" id="CardBody">
               <div class="card-header" id="HeaderCard">
@@ -215,22 +223,68 @@
 
     </div>
 
-    <div class="footer">
-      <div class="flex-container">
-        <div class="NotasRodape">
-          <p style="color: white;display:inline-block;">Formas de contato :</p>
-        </div>
-
-        <div class="NotasRodape">
-          <img src="Assets/Imagens/whatsapp.png" alt="LogoWhatsAPP" style="display:inline-block;">
-          <p style="color: white;display:inline-block;">(51)995352884</p>
-        </div>
-
-        <div class="NotasRodape">
-          <a href="https://www.linkedin.com/in/raphael-bento-b37656181/"> <img src="Assets/Imagens/LogoLinkedin.png"
-              alt="Logo linkedin" id="LogoLink"> </a>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      activeElement: null,
+    };
+  },
+  methods: {
+    showElement(element) {
+      this.activeElement = element;
+    },
+  },
+};
+// export default {
+
+  
+//   data() {
+//     return {
+//       showBuildIt: false,
+//       showBbdi: false,
+//       showMinarsky:false,
+//       showNumeria:false,
+//       showLibracom:false,
+//       showAbsis:false,
+//     };
+//   },
+//   methods: {
+//     showElement(element) {
+//       // Resetar todas as variáveis de exibição
+//       this.showBuildIt = false;
+//       this.showMinarsky = false;
+//       this.showNumeria = false;
+//       this.showLibracom = false;
+//       this.showAbsis = false;
+//       this.showBbdi = false;
+//       // Resetar para outros elementos
+      
+//       // Mostrar o elemento selecionado
+//       switch (element) {
+//         case 'BuildIt':
+//           this.showBuildIt = true;
+//           break;
+//         case 'Libra':
+//           this.showLibra = true;
+//           break;
+//           case 'Mynarski':
+//           this.showMinarsky = true;
+//           break;
+//           case 'ABSIS':
+//           this.showAbsis = true;
+//           break;
+//           case 'NUMERIA':
+//           this.showNumeria = true;
+//           break;
+//           case 'BBDI':
+//           this.showBbdi = true;
+//           break;
+//         // Casos para outros elementos
+//       }
+//     }
+//   }
+// };
+</script>
