@@ -74,7 +74,7 @@
           </a>
         </div>
 
-        <div class="EspacCard">
+        <div class="EspacCard" >
           <a href="#">
             <div class="flip-card">
               <div class="flip-card-inner">
@@ -238,53 +238,4 @@ export default {
     },
   },
 };
-// export default {
-
-  
-//   data() {
-//     return {
-//       showBuildIt: false,
-//       showBbdi: false,
-//       showMinarsky:false,
-//       showNumeria:false,
-//       showLibracom:false,
-//       showAbsis:false,
-//     };
-//   },
-//   methods: {
-//     showElement(element) {
-//       // Resetar todas as variáveis de exibição
-//       this.showBuildIt = false;
-//       this.showMinarsky = false;
-//       this.showNumeria = false;
-//       this.showLibracom = false;
-//       this.showAbsis = false;
-//       this.showBbdi = false;
-//       // Resetar para outros elementos
-      
-//       // Mostrar o elemento selecionado
-//       switch (element) {
-//         case 'BuildIt':
-//           this.showBuildIt = true;
-//           break;
-//         case 'Libra':
-//           this.showLibra = true;
-//           break;
-//           case 'Mynarski':
-//           this.showMinarsky = true;
-//           break;
-//           case 'ABSIS':
-//           this.showAbsis = true;
-//           break;
-//           case 'NUMERIA':
-//           this.showNumeria = true;
-//           break;
-//           case 'BBDI':
-//           this.showBbdi = true;
-//           break;
-//         // Casos para outros elementos
-//       }
-//     }
-//   }
-// };
 </script>

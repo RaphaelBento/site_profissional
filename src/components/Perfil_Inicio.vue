@@ -1,75 +1,49 @@
 <template>
-  <div class="hello">
-  <div class="box">
-    <div class="header">
-    
-        <h1 id="tituloPagina">Raphael Bento</h1>
-        <ul class="nav nav-tabs nav justify-content-center">
-          <li class="nav-item">
-            <router-link  to="/Perfil" exact>Perfil</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/Resumo" @click="closePerfil">Resumo Profissional</router-link>
-            
-          </li>
-          <li class="nav-item">
-            <router-link to="/Certificado">Certificados e Formação</router-link>
-            
-          </li>
-          <li class="nav-item">
-            <router-link to="/Projetos">Projetos</router-link>
-          </li>
-        </ul>
-        
-    </div>
-    <router-view></router-view>
-    <Perfil_Inicio v-if="showPerfil"/>
-
-    <div class="footer">
-      <div class="flex-container">
-        <div class="NotasRodape">
-          <p style="color: white;display:inline-block;">Formas de contato :</p>
-        </div>
-
-        <div  class="NotasRodape">
-             <img src="@/assets/imagens_footer/whatsapp.png" alt="LogoWhatsAPP" >
-             <p style="color: white;display:inline-block;">(51)995352884</p>
-        </div> 
-      
-        <div class="NotasRodape">
-          <a href="https://www.linkedin.com/in/raphael-bento-b37656181/">
-          <img src="@/assets/imagens_footer/LogoLinkedin.png" alt="Logo linkedin" id="LogoLink"> </a>
-        </div>
-
-    
-      </div>
-    </div>
-</div>
-
-    
+     <div class="content">
   
+  <h5 id="SubTitle">Seja bem vindo(a) ao meu perfil Profissional!!</h5>
+  <div class="center">
+    <img src="@/assets/FotoCircular.png" alt="Foto_Perfil" id="FotoPerf" >
+  </div>
+    <h6 style="text-align: center;">Olá obrigado por dedicar um tempo para ver meu perfil aqui no Git</h6>
+   
+    <div class="row" id="LineConte">
+      <div class="col-sm-8">
+        <div class="card" id="CorpCard" >
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Um breve resumo</h5>
+            <p class="card-text" style="text-align: center;">Tenho 32 anos gosto de tecnologias em geral .<br>
+    
+              Algumas de minhas habilidades:<br>
+              - C#, WebForms, AspNet, .NetCore, Razor, Blazor, API .NetCore  <br>
+              - Java focado para Android('Nível básico, estive em um projeto com api30 do Android')<br>
+              - HTML 5, CSS, JavaScript <br>
+              - VueJs('Nivel pleno'), Angular('Iniciante'), React('Iniciante')<br>
+              - Tenho muita paciência tanto para aprender quanto para ensinar<br>
+              - Gosto de desafios e sou determinado.<br>
+              - Também sou resiliente.
+              <br>No momento estou estudando para minha pós.
+              <br> Meu histórico profissional você pode conferir
+              na aba Resumo Profissional ou clicando <a href="ResumoPro.html">aqui.</a> </p>
+          </div>
+        </div>
+      </div>
+   
+    </div>
+ 
   </div>
 </template>
 
 <script>
+import { defineComponent } from 'vue';
 
-import Perfil_Inicio from '@/components/Perfil_Inicio.vue';
-export default {
-  components: {
-    Perfil_Inicio,
+export default defineComponent({
+  setup() {
+    // Lógica do componente aqui
   },
-  data() {
-    return {
-      showPerfil: true,
-    };
-  },
-  methods: {
-    closePerfil() {
-      this.showPerfil = false;
-    },
-  },
-};
+});
 </script>
+
 
 <style scoped>
 h3 {
